@@ -1,5 +1,3 @@
-![Nexus Intelligence](nexusprofilelogo.png)
-
 # Nexus Intelligence
 
 **Autonomous market intelligence agent** providing regime detection, signal-to-noise analysis, technical levels, daily market synthesis, and multi-model research — available via MCP protocol.
