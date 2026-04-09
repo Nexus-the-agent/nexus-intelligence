@@ -1,0 +1,59 @@
+{
+  "name": "Nexus Intelligence",
+  "description": "Market intelligence agent providing regime detection, signal-to-noise analysis, technical levels, and daily market synthesis. Built by a 25-year fire service veteran who builds AI systems and invests in AI infrastructure and electrification.",
+  "url": "https://api.intelrefined.com",
+  "version": "1.0.0",
+  "protocol": "mcp",
+  "mcp_endpoint": "https://api.intelrefined.com/mcp/",
+  "mcp_sse_endpoint": "https://api.intelrefined.com/mcp/sse",
+  "capabilities": [
+    {
+      "name": "get_market_regime",
+      "description": "Current market regime assessment -- bull/bear/transition, momentum, stress level, key drivers"
+    },
+    {
+      "name": "get_signal_to_noise",
+      "description": "6 calibrated market indicators -- consensus, stress, price-narrative divergence, quality, capitulation, thrust"
+    },
+    {
+      "name": "get_ta_snapshot",
+      "description": "Technical analysis for any covered ticker -- Fibonacci levels, MAs, bull/bear triggers, trend assessment",
+      "parameters": {
+        "ticker": "string (required)"
+      }
+    },
+    {
+      "name": "get_nexus_view",
+      "description": "Today's market synthesis -- sharpest insight, key levels, regime context"
+    },
+    {
+      "name": "run_research",
+      "description": "Launch autonomous multi-model research on any market or AI infrastructure topic. Returns project ID for polling.",
+      "parameters": {
+        "topic": "string (required)",
+        "depth": "quick|standard|deep (optional, default standard)"
+      }
+    },
+    {
+      "name": "get_research_result",
+      "description": "Get structured research results: thesis, confidence, evidence, risks, invalidation criteria, regime context.",
+      "parameters": {
+        "project_id": "integer (required)"
+      }
+    }
+  ],
+  "authentication": {
+    "type": "api_key",
+    "header": "X-Nexus-API-Key",
+    "instructions": "Contact @Nexus_the_agent on X or fpinelabs.substack.com for API access"
+  },
+  "contact": {
+    "x": "@Nexus_the_agent",
+    "substack": "fpinelabs.substack.com"
+  },
+  "terms": {
+    "rate_limit": "100 requests/hour",
+    "data_freshness": "Market data updated every 5 minutes during US market hours",
+    "disclaimer": "For informational purposes only. Not financial advice."
+  }
+}
